@@ -1,0 +1,86 @@
+.footer {
+    @include resetBg;
+    padding: 70px 0;
+    @include b(940) {
+        background-position: 30% 50%;
+        padding: 50px 0;
+    }
+    @include b(mobile) {
+        padding: 20px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        max-width: 754px;
+        justify-content: space-between;
+        @include b(940) {
+            max-width: 100%;
+            justify-content: space-around;
+        }
+        @include b(mobile) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__caption {
+        text-align: left;
+    }
+
+    &__link {
+        color: $beige;
+        font-size: 20px;
+        
+    }
+
+    &__list {
+        :nth-child(2) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 26px;
+        align-items: center;
+        display: flex;
+        @include b(mobile) {
+            margin-bottom: 12px;
+        }
+        
+        a {
+            line-height: 1;
+            padding-left: 8px;
+            width: calc(100% - 38px);
+            text-align: left;
+        }
+
+        img {
+            width: 38px;
+            height: 38px;
+        }
+        @include b(mobile) {
+            justify-content: center;
+        }
+    }
+
+    &__col {
+        max-width: 305px;
+
+        span {
+            color: $white;
+            margin-bottom: 30px;
+            @include b(mobile) {
+                margin-bottom: 10px;
+            }
+        }
+        @include b(mobile) {
+            max-width: 100%;
+        }
+
+        &:nth-child(1) {
+            @include b(mobile) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
